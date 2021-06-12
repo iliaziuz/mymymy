@@ -1,7 +1,17 @@
 {% extends 'main/layout.html' %}
 
-{% block title %}Обо мне{% endblock %}
+{% block title %}{{ about }}{% endblock %}
 
 {% block content%}
-    <h1>Обо мне</h1>
+    <div class="features">
+        <h1>{{ about }}</h1>
+        <p>
+            {% filter title %}
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Alias aliquid at aut eos error explicabo in inventore iusto libero necessitatibus nisi,
+            non nostrum officia omnis quasi recusandae sequi vitae, voluptatum.
+            {% endfilter %}
+        </p>
+        <button class="btn btn-danger">Просто нажми</button>
+    </div>
 {% endblock %}

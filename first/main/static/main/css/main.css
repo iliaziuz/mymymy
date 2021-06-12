@@ -50,11 +50,21 @@ aside ul a {
     transform: scale(1.08);
 }
 
- .features {
+main .features {
+    float: left;
     text-align: center;
-    margin-top: 100px;
+    margin-top:50px;
+    width: 75%;
 }
 
-h1 {
-    margin-top: 100px;
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 400px; margin: 20px auto;}
+
+.alert-warning {
+    float: left;
+    clear: both;
+    text-align: left;
+    margin: 20px 35%;
+    width: 400px;
+
 }

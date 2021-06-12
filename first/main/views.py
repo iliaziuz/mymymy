@@ -2,10 +2,19 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'main/index.html')
+    data = {
+        'title': 'Главная страница'
+    }
+    return render(request, 'main/index.html', data)
 
 def about(request):
-    return render(request, 'main/about.html')
+    data = {
+        'about': 'Обо мне'
+    }
+    return render(request, 'main/about.html', data)
 
 def contacts(request):
-    return render(request, 'main/contacts.html')
+    data = {
+        'contacts': 'Контакты'
+    }
+    return render(request, 'main/contacts.html', data)
