@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <meta charset="UTF-8">
+    <title>{% block title%}{% endblock %}</title>
+</head>
+<body>
+    <aside>
+        <img src="{% static 'main/img/logo.png' %}" alt="Logo IT">
+        <span class="logo">Iliaziuz</span>
+        <span class="logo"></span>
+            <h3>Навигация</h3>
+        <ul>
+            <a href="{% url 'home'%}"><li><i class="bi bi-house-fill"></i>Главная</li></a>
+            <a href="{% url 'about'%}"><li><i class="bi bi-person-fill"></i>Обо мне</li></a>
+            <a href="{% url 'contacts'%}"><li><i class="bi bi-envelope-fill"></i>Контакты</li></a>
+        </ul>
+    </aside>
+    <main>
+        {% block content%}
+        {% endblock %}
+    </main>
+</body>
+</html>
